@@ -1,0 +1,290 @@
+:root {
+    --primary-color: #E6E8E6;
+    --secondary-color: #5E9697;
+    --red: #E4113F;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--primary-color);
+    font-size: 21px;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:visited {
+    color: #AB0D2F;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+
+a:active{
+    color: white;
+}
+
+#toprow {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.5;
+}
+
+button, .button{
+    background-color: var(--red);
+    color:  #E6E8E6;
+    border-radius: 4px;
+    height: 35px;
+    width: 130px;
+    border: 0;
+    transition-property: transform, background-color;
+    transition-duration: .5s, .5s;
+    font-family: inherit;
+}
+
+button:hover, .button:hover {
+   background-color: #E6E8E6;
+   color: var(--red);
+   box-shadow: 0 5px 8px var(--red);
+   transform: scale(1.05);
+   font-family: inherit;
+}
+
+body {
+    text-align: center;
+}
+
+.button {
+    padding: 5px 10px;
+    margin: 10px 100;
+}
+
+#experience {
+    margin: 20px auto;
+}
+
+#aboutme {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+#find_me {
+    text-align: center;
+}
+
+#social_media {
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.header__item {
+    flex: 0 1 200px;
+    height: 120px;
+}
+
+.header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-menu {
+    list-style-type: none;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+#logo {
+    width: 400px;
+}
+
+#nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#profile-picture {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+}
+
+#welcome-text {
+    text-align: center;
+    margin: 20px;
+}
+
+/* start grid fallback */
+/* .box {
+    display: inline-block;
+    width: 33%;
+   } */
+   /* end grid fallback */
+
+.box {
+    background-color: var(--secondary-color);
+    min-height: 200px;
+    text-align: center;
+}
+
+#box-container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#box-container .box:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#box-container .box:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.svg {
+    margin: 10px;
+}
+
+/* media querie */
+
+@media all and (max-width: 500px) {
+    #box-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    #box-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #profile-picture {
+        margin: 10px auto;
+    }
+
+    #welcome {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #box-container {
+        grid-gap: 10px;
+    }
+
+    #box-container .box:nth-child(1) {
+        grid-row: auto/auto;
+        grid-column: auto/auto;
+    }
+
+    #box-container .box:nth-child(4) {
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+}
+
+#cform {
+    text-align: center;
+    flex: s;
+}
+
+#contactme {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 50px;
+}
+
+.contactme_item {
+    display: inline-block;
+}
+
+#my_cv {
+    display: block;
+    margin: 30px auto;
+
+}
+
+svg * {
+    transform-box: fill-box;
+}
+
+#laptop {
+    display: block;
+    height: 400px;
+    margin: 10px auto;
+    animation: laptop 1s ease-in-out infinite alternate;
+}
+
+@keyframes laptop {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+#circle {
+    fill: var(--secondary-color);
+    animation: circle 1s ease-in-out infinite alternate;
+}
+
+@keyframes circle {
+    0% {
+        fill: var(--red);
+    }
+
+    100% {
+        fill: var(--secondary-color);
+    }
+}
+
+#screen {
+    animation: screen 1s ease-in-out infinite alternate;
+}
+
+@keyframes screen {
+    0% {
+        fill: var(--secondary-color);
+    }
+
+    100% {
+        fill: var(--red);
+    }
+    
+}
