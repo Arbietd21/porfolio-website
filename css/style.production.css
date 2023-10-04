@@ -100,7 +100,7 @@ body {
 
 .button {
     padding: 5px 10px;
-    margin: 10px 100;
+    margin: 10px 100px;
 }
 
 #experience {
@@ -133,46 +133,37 @@ h1, h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px;
 }
 
-.header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
-    height: 120px;
-}
-
-.header__item:last-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: right;
-}
-
-.nav-menu {
-    list-style-type: none;
-}
-
-.nav-menu li {
+.menu-item {
     display: inline-block;
-}
-
-#logo {
-    width: 400px;
 }
 
 #nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+}
+
+#logo {
+    width: 400px;
+}
+
+#nav-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__item {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
 }
 
 #profile-picture {
@@ -326,13 +317,15 @@ h1, h2 {
         grid-column: auto/auto;
         grid-row: auto/auto;
     }
+
+    #logo {
+        height: 100px;
+        width: 300px;
+    }
 }
 
 #cform {
     text-align: center;
-    -webkit-box-flex: s;
-        -ms-flex: s;
-            flex: s;
 }
 
 #contactme {
