@@ -139,17 +139,17 @@ h1, h2 {
     transition: 0.4s;
 }
 
-div.bar.is-active:first-child {
-    transform: rotate(50deg) translate(8px, 10px);
+div.is-active:first-child {
+    transform: rotate(50deg) translate(8px, 7px);
     width: 45px;
 }
 
-div.bar.is-active:nth-child(2) {
+div.is-active:nth-child(2) {
     display: none;
 }
 
-div.bar.is-active:last-child {
-    transform: rotate(-50deg) translate(5px, -10px);
+div.is-active:last-child {
+    transform: rotate(-50deg) translate(8px, -10px);
     width: 45px;
 }
 
