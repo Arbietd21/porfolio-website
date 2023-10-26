@@ -120,6 +120,39 @@ h1, h2 {
     flex-shrink: 1;
 }
 
+#hamburger {
+    margin: auto 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.bar {
+    background-color: var(--red);
+    height: 5px;
+    width: 100%;
+    transition: 0.4s;
+}
+
+div.bar.is-active:first-child {
+    transform: rotate(50deg) translate(8px, 10px);
+    width: 45px;
+}
+
+div.bar.is-active:nth-child(2) {
+    display: none;
+}
+
+div.bar.is-active:last-child {
+    transform: rotate(-50deg) translate(5px, -10px);
+    width: 45px;
+}
+
 #profile-picture {
     width: 400px;
     height: 400px;
@@ -169,50 +202,6 @@ h1, h2 {
 
 .svg {
     margin: 10px;
-}
-
-/* media querie */
-
-@media all and (max-width: 500px) {
-    #box-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-    #box-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media all and (max-width: 750px) {
-    #profile-picture {
-        margin: 10px auto;
-    }
-
-    #welcome {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #box-container {
-        grid-gap: 10px;
-    }
-
-    #box-container .box:nth-child(1) {
-        grid-row: auto/auto;
-        grid-column: auto/auto;
-    }
-
-    #box-container .box:nth-child(4) {
-        grid-column: auto/auto;
-        grid-row: auto/auto;
-    }
-
-    #logo {
-        height: 100px;
-        width: 300px;
-    }
 }
 
 #cform {
@@ -276,6 +265,7 @@ svg * {
     animation: screen 1s ease-in-out infinite alternate;
 }
 
+
 @keyframes screen {
     0% {
         fill: var(--secondary-color);
@@ -285,4 +275,52 @@ svg * {
         fill: var(--red);
     }
     
+}
+
+@media all and (max-width: 500px) {
+    #box-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    #box-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #profile-picture {
+        margin: 10px auto;
+    }
+
+    #welcome {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #box-container {
+        grid-gap: 10px;
+    }
+
+    #box-container .box:nth-child(1) {
+        grid-row: auto/auto;
+        grid-column: auto/auto;
+    }
+
+    #box-container .box:nth-child(4) {
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+
+    #logo {
+        height: 100px;
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #nav {
+        display: none;
+    }
 }
