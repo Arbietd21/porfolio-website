@@ -1,5 +1,6 @@
 let hamburgerBtn = document.querySelector('#hamburger');
 let hamburgerBar = document.querySelectorAll('.bar')
+let hamburgerMenu = document.querySelector('#hamburger-container')
 
 function isActive(element) {
     element.forEach(function(element) {
@@ -10,4 +11,8 @@ function isActive(element) {
 
 hamburgerBtn.addEventListener('click', function() {
     isActive(hamburgerBar);
+});
+
+hamburgerBtn.addEventListener('click', function() {
+    hamburgerMenu.classList.toggle('is-active')
 })
