@@ -84,22 +84,19 @@ h1, h2 {
 }
 
 
-#find_me {
-    text-align: center;
-}
-
-#social_media {
-    display: flex;
-    justify-content: center;
-    
+.svg {
+    display: inline-block;
+    margin: 10px;
 }
 
 footer {
-    z-index: 998;
     position: fixed;
     bottom: 0;
-    left: 50vw;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
+
 
 #header {
     display: flex;
@@ -171,6 +168,7 @@ div.is-active:last-child {
 #welcome {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 #welcome-text {
@@ -209,10 +207,6 @@ div.is-active:last-child {
     grid-row-end: 3;
 }
 
-.svg {
-    margin: 10px;
-}
-
 #cform {
     text-align: center;
 }
@@ -232,10 +226,6 @@ div.is-active:last-child {
     display: block;
     margin: 30px auto;
 
-}
-
-svg * {
-    transform-box: fill-box;
 }
 
 #laptop {
